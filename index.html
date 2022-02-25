@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        a:hover{
+            color: red;
+        }
+        a{
+            color: blue;
+        }
+        body{
+            margin-left: 300px;
+        }
+        .D{
+            margin-left:150px;
+        }
+    </style>
+    <title>Analog Integrated Circuit (IC)</title>
+</head>
+<body>
+    <h1 class="D"><b>CMOS Four Input NAND Gate </b></h1><br>
+    <ul>
+        <li> <a href="#Abstract">Abstract</a></li>
+        <li><a href="#Four input nand gate ">Detailed explanation of circuit</a></li>
+        <li><a href="#Truth table" >Truth table</a></li>
+        <li> <a href="#Schematic" >Schematic</a></li>
+        <li> <a href="#Waveform">Waveform</a></li>
+        <li> <a href="#Simulation Dig">Simulation Dig</a></li>
+    </ul>
+    <section id="Abstract">
+    <p><b><h2>Abstract</h2></b></p>
+    <ul>
+    <li><p>NAND gate is the UNIVERSAL gate which can be used as any logic gate. As the 4 input NAND gate is<br>
+        used for the purpose of buffers, inverters, encoder, decoders, and many more circuit and the CMOS<br>
+        used for obtaining the actual output and observing the waveform. A 4 input NAND gate circuit uses<br>
+        NAND gate having 4 inputs and 1 output.</p></li>
+        </ul>
+    </section><br>
+   <section id="Four input nand gate">
+    <p><b><h2>Detailed explanation of circuit</h2></b></p><br><br>
+    <img src="4 input nand.png" alt="4 input nand.png" width="300px" height="300px">
+</section>
+   <ul>
+   <li> <p>NAND GATE a Boolean operator which gives the value zero if and only if all the operands have a<br>
+            value of one, answer otherwise has a value of one equivalent to NOT AND.</p><br>
+    <li><p>PMOS LOGIC FROM P-channel metal oxide semiconductor is a family of digital circuits based on P-<br>
+                Channel, enhancement mode</p></li><br>
+   <li> <p>NMOS stands for N-type metal oxide semiconductor is a type of MOSFET in which electron are the<br>
+                    dominant charge carrier in the semiconductor channel.</p></li><br>
+    
+    <li><p>The 4 input CMOS NAND gate we have to use 4 NMOS and 4 PMOS transistors which also having<br>
+                        single output with VDD and 4 digital input and GND supply. There are 4 digital input that is A,B,C,D<br>
+                        inputs which are given to the PMOS1 and NMOS1 is given to the input A, and input B is given to the<br>
+                        PMOS2 and NMOS2, and input C is given to the PMOS3 and NMOS3, and input D is given to the</p></li>
+                        <section id="Truth table"></section>
+                        PMOS4 and NMOS4 respectively.</p><br>
+                        <h2><b>Truth Table</b></h2>
+                        <img src="truth table.jpg" alt="truth table" width="500px" height="400px">
+                    </section>
+  <li>  <p>All the 4 PMOS is given to the VDD i.e. PMOS1 is given to the VDD,PMOS2 is also given to the<br>
+                            VDD,PMOS3 is given to the VDD, PMOS4 also given to the VDD. </p></li><br>
+    <li><p>And all 4CMOS is connected to the ground i.e. NMOS1 is connected to ground, NMOS2 is also<br>
+                                connected to the ground, NMOS3 is also connected to the ground and NMOS4 is also connected to<br>
+                                the ground respectively.</p></li><br>
+            <section id="Schematic">
+    <p><h2><b>Schematic</b></h2></p><br>
+    <img class="m" src="schematic.PNG" alt="schematic" width="1000px" height="800px">
+</section>
+  <li> <p>Above fig shows the circuit diagram of CMOS 4 INPUT NAND GATE and the output of the circuit. In<br>
+                            this circuit PMOS and NMOS acts like a NAND gate. And gives the output.</p><br></li>
+                <section id="Waveform">
+   <li> <p>In this circuit diagram when we give the all input low then the the output will be present.When we<br>
+                            give the all input high if and only if the output will be absent.</p><br></li>
+                            <img src="waveform.PNG" alt="waveform" width="1000px" height="800px">
+                        </section><br>
+    <p><h2><b>Tools Used</b></h2></p>
+   <li> <p>For this circuit simulation we used SYNOPSYS compiler. The synopsys custom compiler design<br>
+                                environment is a modern solution for digital and custom analog platform. Custom compiler provides<br>
+                                design entry, simulation management and analysis and custom layout editing features. This tool was<br>
+                                used to design the circuit on transistor level.</p><br></li>
+   <li> <p>SYNOPSYS PRIMEWAVE primewave design is a flexible and easy to handle environment for<br>
+                                    simulation setup this tool is used in various type of simulations.</p></li><br>
+   <li><p>SYNOPSYS 28nm PDK the synopsys 28nm process design kit was used in creation and simulation of<br>
+                                    the above designed circuit.</p></li><br>
+   <section id="Simulation Dig">
+    <p><h2><b>Simulation</b></h2></p>
+    <li><p>Below are steps for the creating the circuit<br> 
+        First of all create libraries as any name without space.</p></li>
+    <img src="steps.PNG" alt="steps" width="1000px" heigth="800px"><br><br>
+    <img src="fing symbol.PNG" alt="fing symbol" width="1000px" height="500px"><br><br>
+   <li> <p>In libraries select cell and create schematic in that we can construct our circuit as per required for simulation and then again save <br>it and build observe any error then correct it after that create another cell for design the IC  <br>for the simulation now apply the input and output for obtaining respective testbenches as per below</p></li>
+    <img src="testbench.PNG" alt="testbench" width="1000px" height="600px"><br><br>
+   <li> <p>After testbench then now prime view for the circuit upload hspice library file then now in that upload.<br>lib file now save the save testbench now observe the display log in that <br>we can see the simulation success for all the selected pins for the simulation analysis and then click for netlist <br>and run and observe the respective waveform signal for respective input and output as per required for the output of NAND gate .
+        For every steps we can build  and observe the output</p></li>
+    
+
+    </section>
+    <p><h2><b>Conclusion</b></h2></p>
+    <li><p>BY using this simulation I am able to perform the 4INPUT CMOS circuit on the various simulation<br>
+                                        platform like synopsys custom compiler, synopsys primewave and synopsys 28nm and I increased<br>
+                                        my knowledge and practical skills.</p><br></li></ul>
+    <p><h2><b>Author:-</b></h2></p>
+    <p><b><i><h3>Mayur Dattatrya Parit</h3></i></b></p>
+    <p>Third Year ,Electronics and Telecommunications </p>
+    <p>Shri Guru Gobind Singhji Institute of Engineering and Technology (SGGSIET), Nanded</p>
+    <p><b><h2>Acknowledgement</h2></b></p>
+    <p>Kunal Ghosh Co-founder of VLSI System Design (VSD) Corp. Pvt. Ltd.</p>
+    <p><h2>References</h2></p>
+    <ul>
+    <p><li>CMOS VLSI design by Neil Weste</li><br>
+        <li>Digital IC by J Rabaey</li></p>
+    
+        <li><p><a href="https://allaboutcircuits.com" target="_blanck" title="References link1">References link_1</a></p></li>
+        <li><p><a href="https://vlsifacts.com" target="_blanck" title="References link">References link_2</a></p></li>
+        <!-- <p>https.\allaboutcircuits.com</p> -->
+       <!-- <li> <p> <a href="https://google.com" target="_blanck">google</a></p> </li> -->
+    </ul>
+
+
+
+                    
+
+
+</body>
+</html>
